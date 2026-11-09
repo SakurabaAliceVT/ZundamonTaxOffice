@@ -13,7 +13,7 @@ module.exports = {
         '^.+\\.tsx?$': ['ts-jest', { useESM: true, tsconfig: 'tsconfig.json' }],
     },
     moduleNameMapper: { '^(\\.{1,2}/.*)\\.js$': '$1' },
-    testRegex: String.raw`src[\\/].*\.test\.ts$`,
+    testRegex: [String.raw`src[\\/].*\.test\.ts$`, String.raw`drivers[\\/].*\.test\.js$`],
     moduleFileExtensions: ['ts', 'js', 'json', 'node'],
-    collectCoverageFrom: ['src/**/*.ts', '!src/**/*.test.ts'],
+    collectCoverageFrom: ['src/**/*.ts', '!src/**/*.test.ts', 'drivers/**/*.js', '!drivers/**/*.test.js'],
 };

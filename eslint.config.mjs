@@ -56,4 +56,8 @@ export default [
         },
         rules: { '@typescript-eslint/no-require-imports': 'off' },
     },
+    {
+        files: ['**/*.test.{js,ts}'],
+        languageOptions: { globals: { ...globals.jest } },
+    },
 ];
