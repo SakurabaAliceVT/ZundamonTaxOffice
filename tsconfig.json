@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "ESNext",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "strict": true,
+        "rootDir": "./src",
+        "outDir": "dist/",
+        "module": "commonjs",
+        "moduleResolution": "Bundler",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowJs": true,
+        "declaration": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["src/**/*.test.ts"],
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    }
+}

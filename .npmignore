@@ -1,0 +1,10 @@
+*
+!package.json
+!plugin.js
+!chatColor.js
+!taxCalculator.js
+!drivers
+!drivers/**
+!static
+!static/**
+static/eslint.config.mjs

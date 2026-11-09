@@ -1,0 +1,49 @@
+{
+  "name": "zundamontaxoffice",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/SakurabaAliceVT/ZundamonTaxOffice#readme",
+  "bugs": {
+    "url": "https://github.com/SakurabaAliceVT/ZundamonTaxOffice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SakurabaAliceVT/ZundamonTaxOffice.git"
+  },
+  "license": "MIT",
+  "author": "SakurabaAliceVT",
+  "type": "commonjs",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "prettier": "prettier --write .",
+    "eslint": "eslint --cache --ext .js,.ts .",
+    "eslint:fix": "eslint --cache --ext .js,.ts . --fix",
+    "ci": "run-p eslint test",
+    "build": "tsc",
+    "prepack": "npm run build && node scripts/prepare-pack.cjs",
+    "postpack": "node scripts/cleanup-pack.cjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.6.6",
+    "@types/ws": "^8.18.2",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest": "^29.17.0",
+    "globals": "^17.14.0",
+    "jest": "^30.5.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.9.10",
+    "ts-jest": "^29.4.15",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "dependencies": {
+    "@onecomme.com/onesdk": "^9.2.0-beta.1",
+    "ws": "^8.22.2"
+  }
+}
