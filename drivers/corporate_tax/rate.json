@@ -1,0 +1,10 @@
+{
+    "name": "法人税（地方法人税を含む）",
+    "function": "corporate_tax",
+    "smallBusinessThreshold": 8000000,
+    "smallBusinessRate": 0.15,
+    "standardRate": 0.232,
+    "localCorporateTaxRate": 0.103,
+    "defenseTaxDeduction": 5000000,
+    "defenseTaxRate": 0.04
+}
