@@ -12,5 +12,6 @@ module.exports = function (income) {
 
     const taxRateInfo = JSON.parse(fs.readFileSync(path.join(__dirname, 'rate.json'), 'utf8'));
     const taxRate = taxRateInfo.rates.find(item => income <= (item.max ?? Infinity));
-    return Math.floor(Math.max(0, income * taxRate.rate - taxRate.minus) / 100) * 100;
+    const roundedTax = Math.floor(Math.max(0, income * taxRate.rate - taxRate.minus) / 100) * 100;
+    return roundedTax === 0 ? 0 : roundedTax;
 };

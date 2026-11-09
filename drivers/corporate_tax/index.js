@@ -19,5 +19,6 @@ module.exports = function (income) {
     const defenseCorporateTax =
         Math.max(0, corporationTax - taxRateInfo.defenseTaxDeduction) * taxRateInfo.defenseTaxRate;
 
-    return Math.floor((corporationTax + localCorporateTax + defenseCorporateTax) / 100) * 100;
+    const roundedTax = Math.floor((corporationTax + localCorporateTax + defenseCorporateTax) / 100) * 100;
+    return roundedTax === 0 ? 0 : roundedTax;
 };

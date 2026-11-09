@@ -15,5 +15,6 @@ module.exports = function (income) {
     if (taxableAmount === 0) return 0;
 
     const taxRate = taxRateInfo.rates.find(item => taxableAmount <= (item.max ?? Infinity));
-    return Math.floor(Math.max(0, taxableAmount * taxRate.rate - taxRate.minus) / 100) * 100;
+    const roundedTax = Math.floor(Math.max(0, taxableAmount * taxRate.rate - taxRate.minus) / 100) * 100;
+    return roundedTax === 0 ? 0 : roundedTax;
 };
