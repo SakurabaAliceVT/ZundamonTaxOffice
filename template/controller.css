@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    max-width: 760px;
+    margin: 36px auto;
+    padding: 0 20px 40px;
+    color: #26343a;
+    background: #f2f6f6;
+    font:
+        16px/1.55 'Yu Gothic UI',
+        sans-serif;
+}
+h1 {
+    color: #166c69;
+}
+section {
+    margin: 20px 0;
+    padding: 22px;
+    border: 1px solid #d5e2e1;
+    border-radius: 14px;
+    background: #fff;
+}
+label {
+    display: block;
+    margin: 14px 0 5px;
+    font-weight: 700;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bdcdcb;
+    border-radius: 8px;
+    font: inherit;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    margin: 10px 8px 0 0;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    background: #147d73;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+button.danger {
+    background: #a9473d;
+}
+#status {
+    min-height: 1.5em;
+    color: #176e5d;
+}
+.summary {
+    color: #46595e;
+}

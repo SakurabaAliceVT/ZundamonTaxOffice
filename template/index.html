@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Overlay - ずんだもん税務署</title>
+        <link rel="stylesheet" href="index.css" />
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <section id="hud">
+            <div class="title"><span>ZUNDAMON TAX OFFICE</span><span id="difficulty">EASY</span></div>
+            <div class="assets" id="assets">¥0</div>
+            <div class="target">目標 <span id="target">¥100,000,000</span></div>
+            <div class="meter"><span id="progress"></span></div>
+            <div class="meta">
+                <span>次回徴税 <b id="countdown">60:00</b></span
+                ><span>徴税回数 <b id="tax-count">0</b></span>
+            </div>
+        </section>
+        <section id="event">
+            <div id="name"></div>
+            <div id="text"></div>
+            <div id="amount"></div>
+        </section>
+        <section id="tax">
+            <h2>税務署が来ました！</h2>
+            <p>所得金額: <b id="tax-income">¥0</b></p>
+            <p>今回の徴収額</p>
+            <strong id="tax-amount">¥0</strong>
+            <p>残り資産: <b id="after-tax">¥0</b></p>
+        </section>
+        <div id="clear">CLEAR!</div>
+    </body>
+</html>
