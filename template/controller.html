@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>設定 - ずんだもん税務署</title>
+        <link rel="stylesheet" href="controller.css" />
+        <script defer src="controller.js"></script>
+    </head>
+    <body>
+        <h1>Zundamon Tax Office</h1>
+        <p>OBSのブラウザーソースには <code>http://127.0.0.1:40100/</code> を指定してください。</p>
+        <section>
+            <h2>チャレンジ設定</h2>
+            <form id="settings">
+                <label for="difficulty">難易度</label>
+                <select id="difficulty">
+                    <option value="easy">EASY：直近の時間帯の金額 ÷ 2</option>
+                    <option value="normal">NORMAL：直近の時間帯の金額</option>
+                    <option value="hard">HARD：累積金額 ÷ 2</option>
+                    <option value="hell">HELL：累積金額</option>
+                </select>
+                <label for="target">目標金額（円）</label><input id="target" type="number" min="1" step="1" required />
+                <label for="interval">税務署が来る間隔（秒）</label
+                ><input id="interval" type="number" min="1" step="1" required />
+                <label for="driver">税額計算ドライバー</label
+                ><input id="driver" value="income_tax" pattern="[A-Za-z0-9_-]+" required />
+                <h3>VOICEVOX読み上げ</h3>
+                <label for="voicevoxUrl">VOICEVOX Engine URL</label><input id="voicevoxUrl" type="url" required />
+                <label for="voicevoxSpeaker">話者スタイルID</label
+                ><input id="voicevoxSpeaker" type="number" min="0" step="1" required />
+                <label for="voicevoxSpeed">話速</label
+                ><input id="voicevoxSpeed" type="number" min="0.1" step="0.1" required />
+                <label for="voicevoxPitch">音高</label><input id="voicevoxPitch" type="number" step="0.01" required />
+                <label for="voicevoxVolume">音量</label
+                ><input id="voicevoxVolume" type="number" min="0" step="0.1" required />
+                <label for="taxableTemplate">課税時の原稿（{income}、{taxAmount} が使えます）</label
+                ><textarea id="taxableTemplate" rows="3" required></textarea>
+                <label for="noTaxTemplate">税額0円のときの原稿</label
+                ><textarea id="noTaxTemplate" rows="2" required></textarea>
+                <button type="submit">設定を保存</button>
+            </form>
+        </section>
+        <section>
+            <h2>チャレンジ操作</h2>
+            <p class="summary" id="summary">状態を読み込み中…</p>
+            <button id="taxNow" type="button">今すぐ徴税</button>
+            <button id="reset" class="danger" type="button">チャレンジをリセット</button>
+            <p id="status" role="status"></p>
+        </section>
+    </body>
+</html>
